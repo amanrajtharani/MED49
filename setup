@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS Employees;
+
+CREATE TABLE Employees (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Role VARCHAR(100) NOT NULL,
+    Email VARCHAR(100),
+    Department VARCHAR(50),
+    HireDate DATE,
+    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO Employees (FirstName, LastName, Role, Email, Department, HireDate) VALUES
+('Sarah', 'Johnson', 'Senior Software Engineer', 'sarah.johnson@med49.com', 'Engineering', '2020-03-15'),
+('Michael', 'Chen', 'Product Manager', 'michael.chen@med49.com', 'Product', '2019-07-22'),
+('Emily', 'Rodriguez', 'UX Designer', 'emily.rodriguez@med49.com', 'Design', '2021-01-10'),
+('David', 'Thompson', 'DevOps Engineer', 'david.thompson@med49.com', 'Engineering', '2020-11-05'),
+('Jessica', 'Williams', 'Data Analyst', 'jessica.williams@med49.com', 'Analytics', '2021-06-18'),
+('Robert', 'Martinez', 'QA Engineer', 'robert.martinez@med49.com', 'Engineering', '2022-02-14'),
+('Amanda', 'Lee', 'Marketing Manager', 'amanda.lee@med49.com', 'Marketing', '2019-09-30'),
+('James', 'Brown', 'Solutions Architect', 'james.brown@med49.com', 'Engineering', '2018-05-20');
+
+SELECT * FROM Employees;
